@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/bellu-labs-application/static/css/main.3b45e935.css",
-    "main.js": "/bellu-labs-application/static/js/main.61085850.js",
+    "main.js": "/bellu-labs-application/static/js/main.725c85b8.js",
     "static/js/787.4414e35c.chunk.js": "/bellu-labs-application/static/js/787.4414e35c.chunk.js",
     "static/media/Fino_Sans_Medium.ttf": "/bellu-labs-application/static/media/Fino_Sans_Medium.3d58eca18a498a810cac.ttf",
     "static/media/Fino_Sans_Medium.otf": "/bellu-labs-application/static/media/Fino_Sans_Medium.83051d292c76fbf4836b.otf",
     "index.html": "/bellu-labs-application/index.html",
     "main.3b45e935.css.map": "/bellu-labs-application/static/css/main.3b45e935.css.map",
-    "main.61085850.js.map": "/bellu-labs-application/static/js/main.61085850.js.map",
+    "main.725c85b8.js.map": "/bellu-labs-application/static/js/main.725c85b8.js.map",
     "787.4414e35c.chunk.js.map": "/bellu-labs-application/static/js/787.4414e35c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3b45e935.css",
-    "static/js/main.61085850.js"
+    "static/js/main.725c85b8.js"
   ]
 }

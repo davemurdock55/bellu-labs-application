@@ -1,13 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function SurveyOption (props)
 {
-	const { image, text, id, subtitle, onOptionSelect, isSelected } = props;
+	const { image, text, id, subtitle, groupName, onOptionSelect, selectedOption } = props;
+
+	const [isSelected, setIsSelected] = useState(selectedOption === id);
 
 	const handleOptionChange = () =>
 	{
+		setIsSelected(true);
 		onOptionSelect(id);
 	};
+
+	useEffect(() =>
+	{
+		localStorage.setItem(id, JSON.stringify(isSelected));
+	}, [id, isSelected]);
 
 	return (
 		<label
@@ -16,10 +24,10 @@ export default function SurveyOption (props)
 				}` }
 		>
 			<input
-				type="checkbox"
+				type="radio"
 				id={ id }
-				name="option"
-				value={ text }
+				name={ groupName }
+				value={ id }
 				checked={ isSelected }
 				className="hidden"
 				onChange={ handleOptionChange }

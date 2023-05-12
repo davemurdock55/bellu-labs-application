@@ -25,7 +25,7 @@ export default function HairAndScalp ({ onAnswerSelect })
 	const questions = [
 		{ id: 'hair-type', component: HairTypeQuestion },
 		{ id: 'scalp-condition', component: ScalpConditionQuestion }
-		// add other question components here  
+		// add other question components here
 	];
 
 
@@ -45,11 +45,15 @@ export default function HairAndScalp ({ onAnswerSelect })
 		}
 	}
 
-	function handleBack ()
+	function handleBack (selectedOption)
 	{
 		if (currentQuestionIndex > 0)
 		{
 			const prevQuestion = questions[currentQuestionIndex - 1];
+			if (selectedOption !== null)
+			{
+				onAnswerSelect(currentQuestion.id, selectedOption);
+			}
 			navigate(`/hair-and-scalp/${prevQuestion.id}`);
 			setCurrentQuestionIndex(currentQuestionIndex - 1);
 		}

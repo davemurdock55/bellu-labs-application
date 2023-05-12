@@ -33,6 +33,8 @@ function App ()
   {
     const newAnswer = { questionId, optionId };
     setAnswers([...answers, newAnswer]);
+
+    // Trying to bugfix this to see what's going on
     console.log("New answer:", newAnswer);
     console.log("All answers:", answers);
   }

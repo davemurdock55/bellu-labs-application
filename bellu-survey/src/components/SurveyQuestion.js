@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import SurveyOption from './SurveyOption';
 
-
 export default function SurveyQuestion (props)
 {
 	const [selectedOption, setSelectedOption] = useState(null);
@@ -23,14 +22,14 @@ export default function SurveyQuestion (props)
 			<div className="flex flex-wrap justify-center -mx-4">
 				{ Options.map((type) => (
 					<div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 px-4 py-4" key={ type.id }>
-
 						<SurveyOption
 							image={ type.image }
 							text={ type.text }
 							id={ type.id }
 							subtitle={ type.subtitle }
+							groupName={ props.groupName }
 							onOptionSelect={ handleOptionSelect }
-							isSelected={ selectedOption === type.id }
+							selectedOption={ selectedOption }
 						/>
 					</div>
 				)) }
@@ -38,9 +37,7 @@ export default function SurveyQuestion (props)
 			{/* Used for testing: */ }
 			<div className="mt-8 text-center">
 				{ selectedOption && (
-					<p className="text-lg font-bold">
-						You have selected option { selectedOption }
-					</p>
+					<p className="text-lg font-bold">You have selected option { selectedOption }</p>
 				) }
 			</div>
 		</div>

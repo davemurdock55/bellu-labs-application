@@ -36,13 +36,13 @@ export default function SurveyQuestion (props)
 				)) }
 			</div>
 			{/* Used for testing: */ }
-			{/* <div className="mt-8 text-center">
+			<div className="mt-8 text-center">
 				{ selectedOption && (
 					<p className="text-lg font-bold">
 						You have selected option { selectedOption }
 					</p>
 				) }
-			</div> */}
+			</div>
 		</div>
 	);
 }

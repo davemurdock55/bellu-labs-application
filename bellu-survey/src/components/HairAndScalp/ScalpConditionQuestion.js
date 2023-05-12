@@ -54,6 +54,7 @@ export default function ScalpConditionQuestion ()
 					</div>
 				)) }
 			</div>
+			{/* Used for testing: */ }
 			<div className="mt-8 text-center">
 				{ selectedOption && (
 					<p className="text-lg font-bold">

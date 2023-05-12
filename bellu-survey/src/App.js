@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-function App() {
+import Survey from "./components/TestSurvey";
+import Landing from "./components/Landing";
+import HairAndScalp from "./components/HairAndScalp/HairAndScalp";
+import Lifestyle from "./components/Lifestyle/Lifestyle";
+import History from "./components/History/History";
+import GoalsAndPreferences from "./components/GoalsAndPreferences/GoalsAndPreferences";
+
+
+function App ()
+{
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      {/* <Navbar /> */ }
+      <div style={ { marginTop: '90px' } }></div>
+      <Routes>
+        <Route path="/" element={ <Landing /> }></Route>
+        <Route path="/hair-and-scalp" element={ <HairAndScalp /> }></Route>
+        <Route path="/lifestyle" element={ <Lifestyle /> }></Route>
+        <Route path="/history" element={ <History /> }></Route>  {/* might want to change it from /history to avoid any conflicts */ }
+        <Route path="/goals-and-preferences" element={ <GoalsAndPreferences /> }></Route>
+      </Routes>
+    </Router>
   );
 }
 

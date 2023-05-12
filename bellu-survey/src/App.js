@@ -48,8 +48,8 @@ function App ()
           <Navbar />
 
           <Routes>
-            <Route path="" element={ <Landing /> } />
-            <Route path="/" element={ <Landing /> } />
+            {/* <Route path="" element={ <Landing /> } />
+            <Route path="/" element={ <Landing /> } /> */}
             <Route path="/bellu-labs-application/" element={ <Landing /> } />
             <Route path="/hair-and-scalp/:question" element={ <HairAndScalp onAnswerSelect={ handleAnswerSelect } /> } />
             <Route path="/lifestyle/:question" element={ <Lifestyle /> } />

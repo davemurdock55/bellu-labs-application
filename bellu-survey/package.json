@@ -17,7 +17,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "bellu-survey -d build",
+    "deploy": "bellu-labs-application -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

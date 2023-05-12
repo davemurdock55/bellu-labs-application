@@ -6,19 +6,18 @@ import ScalpConditionQuestion from './ScalpConditionQuestion';
 
 export default function HairAndScalp ()
 {
-	const { question } = useParams(); // get current question id from URL
-	const navigate = useNavigate(); // used to change URL
-	const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0); // keep track of current question
+	const { question } = useParams();
+	const navigate = useNavigate();
+	const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+	const [selectedOptions, setSelectedOptions] = useState({});
 
 	useEffect(() =>
 	{
 		if (!question)
 		{
-			// if no id provided, redirect to first question
 			navigate(`/hair-and-scalp/hair-type`);
 		} else
 		{
-			// find index of current question
 			const index = questions.findIndex((q) => q.id === question);
 			setCurrentQuestionIndex(index);
 		}
@@ -26,9 +25,8 @@ export default function HairAndScalp ()
 
 	const questions = [
 		{ id: 'hair-type', component: HairTypeQuestion },
-		{ id: 'scalp-condition', component: ScalpConditionQuestion },
-		// add other question components here
-	];
+		{ id: 'scalp-condition', component: ScalpConditionQuestion }];
+	// add other question components here  ];
 
 	const currentQuestion = questions[currentQuestionIndex];
 	const nextQuestion = questions[currentQuestionIndex + 1];
@@ -55,6 +53,14 @@ export default function HairAndScalp ()
 		}
 	}
 
+	function handleOptionSelect (optionId)
+	{
+		setSelectedOptions((prevState) => ({
+			...prevState,
+			[currentQuestion.id]: optionId,
+		}));
+	}
+
 	return (
 		<div className="flex flex-col h-screen">
 			<div className="flex-1">
@@ -62,13 +68,13 @@ export default function HairAndScalp ()
 				<div className="mt-auto flex justify-between">
 					<button
 						onClick={ handleBack }
-						className="my-10 py-2 px-4 bg-gray-500 text-white font-bold rounded-md mx-72"
+						className="my-10 py-2 px-4 bg-[#778996] text-white font-bold rounded-md mx-72"
 					>
 						Back
 					</button>
 					<button
 						onClick={ handleNext }
-						className="my-10 py-2 px-4 bg-gray-500 text-white font-bold rounded-md mx-72"
+						className="my-10 py-2 px-4 bg-[#778996] text-white font-bold rounded-md mx-72"
 					>
 						Next
 					</button>

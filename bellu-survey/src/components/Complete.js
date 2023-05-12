@@ -10,10 +10,6 @@ export default function Complete ()
 					<p className="text-gray-600">
 						You will be sent your recommendations as soon as the lab process your results.
 					</p>
-
-					<div style={ { display: "flex", flexDirection: "column", alignItems: "center" } }>
-						<button type="submit" className="my-6 p-4 bg-[#e1c2bd] text-white font-bold">Download Results</button>
-					</div>
 				</div>
 			</div>
 		</div>

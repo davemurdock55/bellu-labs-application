@@ -53,10 +53,10 @@ function App ()
             <Route path="/bellu-labs-application/" element={ <Landing /> } />
             <Route path="/landing" element={ <Landing /> } />
             <Route path="/hair-and-scalp/:question" element={ <HairAndScalp onAnswerSelect={ handleAnswerSelect } /> } />
-            <Route path="/lifestyle/:question" element={ <Lifestyle /> } />
-            <Route path="/history/:question" element={ <History /> } />
+            <Route path="/lifestyle/" element={ <Lifestyle /> } />
+            <Route path="/history/" element={ <History /> } />
             <Route
-              path="/goals-and-preferences/:question"
+              path="/goals-and-preferences/"
               element={ <GoalsAndPreferences /> }
             />
             <Route

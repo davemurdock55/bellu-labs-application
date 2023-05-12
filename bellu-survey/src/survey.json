@@ -1,0 +1,138 @@
+{
+	"questions": [
+		{
+			"section": "Hair & Scalp",
+			"id": "hair-type",
+			"text": "Select the hair type that most closely resembles your hair.",
+			"type": "radio",
+			"options": [
+				"Straight",
+				"Wavy",
+				"Curly",
+				"Coily"
+			]
+		},
+		{
+			"section": "Hair & Scalp",
+			"id": "scalp-dryness",
+			"text": "In general, your scalp is:",
+			"type": "radio",
+			"options": [
+				"Dry",
+				"Average",
+				"Greasy"
+			]
+		},
+		{
+			"section": "Hair & Scalp",
+			"id": "hair-dryness",
+			"text": "In general, your hair is:",
+			"type": "radio",
+			"options": [
+				"Dry",
+				"Average",
+				"Greasy"
+			]
+		},
+		{
+			"section": "Hair & Scalp",
+			"id": "hair-frizz",
+			"text": "Your hair is:",
+			"type": "radio",
+			"options": [
+				"Never frizzy",
+				"Frizzy some of the time",
+				"Frizzy most of the time"
+			]
+		},
+		{
+			"section": "Hair & Scalp",
+			"id": "hair-thickness",
+			"text": "How thick is your hair? Rub a single strand of hair between your fingers. What does it feel like?",
+			"type": "radio",
+			"options": [
+				"Very Fine",
+				"Fine",
+				"Medium",
+				"Thick",
+				"Coarse"
+			]
+		},
+		{
+			"section": "Hair & Scalp",
+			"id": "hair-air-dry",
+			"text": "Hair air dry",
+			"type": "radio",
+			"options": [
+				"Looks good",
+				"Looks okay",
+				"Looks bad"
+			]
+		},
+		{
+			"section": "Hair & Scalp",
+			"id": "hair-length",
+			"text": "Hair length",
+			"type": "radio",
+			"options": [
+				"Very short",
+				"Short",
+				"Medium",
+				"Long",
+				"Very long"
+			]
+		},
+		{
+			"section": "Hair & Scalp",
+			"id": "hair-growth",
+			"text": "Hair growth per month",
+			"type": "radio",
+			"options": [
+				"Less than 0.5 inches",
+				"0.5 to 1 inch",
+				"1 to 1.5 inches",
+				"1.5 to 2 inches",
+				"More than 2 inches"
+			],
+			"required": true
+		},
+		{
+			"section": "Lifestyle",
+			"id": "bleach",
+			"text": "Do you bleach?",
+			"type": "radio",
+			"options": [
+				"Yes",
+				"No"
+			],
+			"required": true
+		},
+		{
+			"section": "Lifestyle",
+			"id": "bleach-frequency",
+			"text": "How often do you bleach?",
+			"type": "radio",
+			"options": [
+				"Never",
+				"Less than once a year",
+				"Once a year",
+				"Every 6 months",
+				"Every 3 months",
+				"Every month",
+				"More than once a month"
+			],
+			"required": false
+		},
+		{
+			"section": "Lifestyle",
+			"id": "color",
+			"text": "Do you color?",
+			"type": "radio",
+			"options": [
+				"Yes",
+				"No"
+			],
+			"required": true
+		}
+	]
+}

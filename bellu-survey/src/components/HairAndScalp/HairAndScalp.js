@@ -1,8 +1,12 @@
-import React from 'react';
+import { useHistory, useParams } from 'react-router-dom';
+import HairTypeQuestion from './HairTypeQuestion';
 
 export default function HairAndScalp ()
 {
+
 	return (
-		<div>HairAndScalp</div>
+		<div>
+			<HairTypeQuestion />
+		</div>
 	);
 }

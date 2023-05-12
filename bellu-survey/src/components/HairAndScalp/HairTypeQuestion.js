@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import SurveyOption from '../SurveyOption';
+import SurveyOption from '../SurveyOption';
 import SurveyQuestion from '../SurveyQuestion';
 
 export default function HairTypeQuestion ()

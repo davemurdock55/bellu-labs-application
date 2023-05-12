@@ -27,6 +27,15 @@ function App ()
     setFormData(formDataObject); // set the object as the state of the component
   };
 
+  const [answers, setAnswers] = useState([]);
+
+  function handleAnswerSelect (questionId, optionId)
+  {
+    const newAnswer = { questionId, optionId };
+    setAnswers([...answers, newAnswer]);
+  }
+
+
   return (
     <div className="text-gray-800">
       <form onSubmit={ handleSubmit }>
@@ -35,7 +44,7 @@ function App ()
 
           <Routes>
             <Route path="/" element={ <Landing /> } />
-            <Route path="/hair-and-scalp/:question" element={ <HairAndScalp /> } />
+            <Route path="/hair-and-scalp/:question" element={ <HairAndScalp onAnswerSelect={ handleAnswerSelect } /> } />
             <Route path="/lifestyle/:question" element={ <Lifestyle /> } />
             <Route path="/history/:question" element={ <History /> } />
             <Route

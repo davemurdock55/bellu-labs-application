@@ -4,12 +4,11 @@ import HairTypeQuestion from './HairTypeQuestion';
 import ScalpConditionQuestion from './ScalpConditionQuestion';
 // import other question components
 
-export default function HairAndScalp ()
+export default function HairAndScalp ({ onAnswerSelect })
 {
 	const { question } = useParams();
 	const navigate = useNavigate();
 	const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-	const [selectedOptions, setSelectedOptions] = useState({});
 
 	useEffect(() =>
 	{
@@ -25,16 +24,19 @@ export default function HairAndScalp ()
 
 	const questions = [
 		{ id: 'hair-type', component: HairTypeQuestion },
-		{ id: 'scalp-condition', component: ScalpConditionQuestion }];
-	// add other question components here  ];
+		{ id: 'scalp-condition', component: ScalpConditionQuestion }
+		// add other question components here  
+	];
+
 
 	const currentQuestion = questions[currentQuestionIndex];
 	const nextQuestion = questions[currentQuestionIndex + 1];
 
-	function handleNext ()
+	function handleNext (selectedOption)
 	{
 		if (nextQuestion)
 		{
+			onAnswerSelect(currentQuestion.id, selectedOption);
 			navigate(`/hair-and-scalp/${nextQuestion.id}`);
 			setCurrentQuestionIndex(currentQuestionIndex + 1);
 		} else
@@ -55,16 +57,18 @@ export default function HairAndScalp ()
 
 	function handleOptionSelect (optionId)
 	{
-		setSelectedOptions((prevState) => ({
-			...prevState,
-			[currentQuestion.id]: optionId,
-		}));
+		onAnswerSelect(currentQuestion.id, optionId);
 	}
 
 	return (
 		<div className="flex flex-col h-screen">
 			<div className="flex-1">
-				{ currentQuestion && <currentQuestion.component /> }
+				{ currentQuestion &&
+					<currentQuestion.component
+						selectedOption={ null }
+						handleOptionSelect={ handleOptionSelect }
+					/>
+				}
 				<div className="mt-auto flex justify-between">
 					<button
 						onClick={ handleBack }
@@ -73,7 +77,7 @@ export default function HairAndScalp ()
 						Back
 					</button>
 					<button
-						onClick={ handleNext }
+						onClick={ () => handleNext(null) }
 						className="my-10 py-2 px-4 bg-[#778996] text-white font-bold rounded-md mx-72"
 					>
 						Next

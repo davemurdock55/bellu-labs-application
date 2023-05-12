@@ -9,7 +9,7 @@ export default function Navbar ()
 			<nav className="bg-[#e1c2bd]">
 				<NavLink to="/" className="flex items-center justify-center">
 					<img
-						src="/images/bellu-labs-1.png"
+						src="./images/bellu-labs-1.png"
 						alt="Bellu Labs Logo"
 						className="h-12 w-12"
 					/>

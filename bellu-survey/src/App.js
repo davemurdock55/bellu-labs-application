@@ -51,6 +51,7 @@ function App ()
             {/* <Route path="" element={ <Landing /> } />
             <Route path="/" element={ <Landing /> } /> */}
             <Route path="/bellu-labs-application/" element={ <Landing /> } />
+            <Route path="/landing" element={ <Landing /> } />
             <Route path="/hair-and-scalp/:question" element={ <HairAndScalp onAnswerSelect={ handleAnswerSelect } /> } />
             <Route path="/lifestyle/:question" element={ <Lifestyle /> } />
             <Route path="/history/:question" element={ <History /> } />

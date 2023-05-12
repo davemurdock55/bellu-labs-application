@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 
 export default function SurveyOption (props)
 {
-	const { image, text, id, subtitle, groupName, onOptionSelect, selectedOption } = props;
+	const { image, text, id, subtitle, groupName, onOptionSelect } = props;
 
-	const [isSelected, setIsSelected] = useState(selectedOption === id);
+	const [isSelected, setIsSelected] = useState(false);
 
 	const handleOptionChange = () =>
 	{
-		setIsSelected(true);
+		setIsSelected(!isSelected);
 		onOptionSelect(id);
 	};
 
@@ -24,7 +24,7 @@ export default function SurveyOption (props)
 				}` }
 		>
 			<input
-				type="radio"
+				type="checkbox"
 				id={ id }
 				name={ groupName }
 				value={ id }
@@ -40,3 +40,8 @@ export default function SurveyOption (props)
 		</label>
 	);
 }
+
+
+
+
+

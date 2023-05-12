@@ -25,7 +25,7 @@ export default function Landing ()
 						Finally, we will repeat our product recommendations to you and give you even more detail about the lifestyle recommendations.
 					</p>
 					<div style={ { display: "flex", flexDirection: "column", alignItems: "center" } }>
-						<Link to="/hair-and-scalp" className="my-6 p-4 bg-[#e1c2bd] text-white font-bold">Let’s get into it!</Link>
+						<Link to="/hair-and-scalp/hair-type" className="my-6 p-4 bg-[#e1c2bd] text-white font-bold">Let’s get into it!</Link>
 					</div>
 				</div>
 			</div>

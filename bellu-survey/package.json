@@ -1,8 +1,8 @@
 {
   "name": "bellu-survey",
   "version": "0.1.0",
-  "homepage": "https://davemurdock55.github.io/bellu-labs-application",
-  "private": true,
+  "homepage": "https://davemurdock55.github.io/bellu-labs-application/",
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",

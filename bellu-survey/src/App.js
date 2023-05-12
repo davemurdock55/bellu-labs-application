@@ -33,7 +33,10 @@ function App ()
   {
     const newAnswer = { questionId, optionId };
     setAnswers([...answers, newAnswer]);
+    console.log("New answer:", newAnswer);
+    console.log("All answers:", answers);
   }
+
 
 
   return (

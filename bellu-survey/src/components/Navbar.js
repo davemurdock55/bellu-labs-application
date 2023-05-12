@@ -20,7 +20,7 @@ export default function Navbar ()
 			</nav>
 			<div className="flex flex-row justify-center space-x-4 p-4 pt-2 h-20 text-md font-medium text-[#778996]">
 				<NavLink
-					to="/hair-and-scalp"
+					to="/hair-and-scalp/hair-type"
 					className={ ({ isActive }) =>
 						isActive ? `${activeClass} px-3 flex items-center justify-center border-2 border-solid border-[#778996] basis-2/12` : 'px-3 flex items-center justify-center border-2 border-solid border-[#778996] basis-2/12'
 					}

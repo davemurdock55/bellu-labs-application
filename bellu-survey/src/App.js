@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { CSVLink } from "react-csv";
+
 
 
 import Navbar from "./components/Navbar";
@@ -29,7 +31,12 @@ function App ()
             <Route path="/lifestyle/:question" element={ <Lifestyle /> }></Route>
             <Route path="/history/:question" element={ <History /> }></Route>  {/* might want to change it from /history to avoid any conflicts */ }
             <Route path="/goals-and-preferences/:question" element={ <GoalsAndPreferences /> }></Route>
-            <Route path="/complete" element={ <Complete /> }></Route>
+            <Route path="/complete" element={
+              <>
+                <Complete />
+                {/* <CSVLink data={ formData }>Download CSV</CSVLink> */ }
+              </>
+            } />
           </Routes>
         </Router>
       </form>

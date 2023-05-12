@@ -4,11 +4,13 @@ export default function SurveyOption (props)
 {
 	const { image, text, id, subtitle, groupName, onOptionSelect } = props;
 
-	const [isSelected, setIsSelected] = useState(false);
+	const [isSelected, setIsSelected] = useState(
+		JSON.parse(localStorage.getItem(id)) || false
+	);
 
 	const handleOptionChange = () =>
 	{
-		setIsSelected(!isSelected);
+		setIsSelected(true);
 		onOptionSelect(id);
 	};
 
@@ -24,7 +26,7 @@ export default function SurveyOption (props)
 				}` }
 		>
 			<input
-				type="checkbox"
+				type="radio"
 				id={ id }
 				name={ groupName }
 				value={ id }
@@ -40,8 +42,3 @@ export default function SurveyOption (props)
 		</label>
 	);
 }
-
-
-
-
-
